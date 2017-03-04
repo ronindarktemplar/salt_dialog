@@ -35,7 +35,7 @@ function IPeUser()
 
 }
 
-function ListStatesTree()
+function ListAllJobs()
 {    
 	clear;
 
@@ -51,14 +51,14 @@ function ListStatesTree()
 #	
     	#echo -e "$(sudo salt $myminion state.show_highstate --out=json | grep __sls__ | sed 's/, *$//' | sort -u | awk '{print $2}')" > $todialog
 	#comando mais simples
-	echo -e "$(sudo salt $myminion  cp.list_states | sed 1d | sed "s/\-//g" | tr -s [:space:] )" > $todialog
+	echo -e "$(sudo salt-run jobs.list_jobs search_target=$myminion )" > $todialog
 
-	dialog --title "States off minion: $myminion " --textbox $todialog 45 50
+	dialog --title "All Jobs: " --textbox $todialog 45 50
 
 	Menu
 }
 
-function RunState()
+function ListRunsJobs()
 {    
 	clear;
 
@@ -66,15 +66,10 @@ function RunState()
        
 	IPeUser myminion        
 
-	echo -e "$(sudo salt $myminion  cp.list_states | sed 1d | sed "s/\- //g" | tr -s [:space:] )" > $todialog
+	echo -e "$(sudo  salt-run jobs.last_run target=$myminion )" > $todialog
 
-	#local mycommand=$(cat $todialog)  
-	SelectFunction mychoice
 
-	#dialog --cr-wrap --sleep 2 --infobox "Escolhi: $mychoice" 0 0
-	SelectViewDoTest $myminion $mychoice 
-
-	dialog --title 'Documentation' --textbox $todialog 0 0
+	dialog --title 'Jobs last_run for $myminion' --textbox $todialog 0 0
 
 	Menu
 }
