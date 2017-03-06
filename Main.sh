@@ -10,7 +10,11 @@ function Menu()
 	2 "Monitoramento" \
 	3 "Backup" \
 	4 "Enlace" \
-	5 "Help" --stdout)
+	5 "Salt-Help" \
+	6 "Salt-Jobs" \
+	7 "Salt-States" --stdout)
+
+
 
 	
 	#echo $menugeral
@@ -32,7 +36,13 @@ function Menu()
 		5)  ./MenuHelps.sh
 			;;			
 
-	*) echo "Menu Inválido!" ;;
+		6)  ./MenuJobs.sh
+			;;
+
+		7)  ./MenuStates.sh
+			;;			
+		*) exit
+		       	;;
 	esac
 	
 	

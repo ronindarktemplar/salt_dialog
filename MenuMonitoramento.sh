@@ -83,10 +83,10 @@ function Menu()
 	clear
 
 	menuConfiguracao=$(dialog --menu "Menu/Configuração" 20 35 15 \
-	1 "Monitorar Portas" \
-	2 "Vizualizar Logs" \
-	3 "Gerencia Agendamento" \
-	9 "Voltar" --stdout)
+	1 "Monitoring Ports" \
+	2 "View        Logs" \
+	3 "Schedule   Setup" \
+	9 "Exit" --stdout)
 	
     	
 	case $menuConfiguracao in		

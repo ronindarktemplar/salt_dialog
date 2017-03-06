@@ -137,11 +137,11 @@ function Menu()
 {
     clear
 
-menuEnlace=$(dialog --menu "Menu/Usuarios" 20 35 15 \
-1 "Rodar como Servidor" \
-2 "Rodar como Cliente" \
-3 "Analisar Logs" \
-9 "Voltar" --stdout)
+menuEnlace=$(dialog --menu "Menu/Enlace" 20 35 15 \
+1 "Run as Server" \
+2 "Run as Client" \
+3 "View     Logs" \
+9 "Exit" --stdout)
 
 
   
@@ -159,11 +159,10 @@ menuEnlace=$(dialog --menu "Menu/Usuarios" 20 35 15 \
             AnalisarLogs
             ;;
 
-        9)      ./Main.sh;;
-
-        
-
-        *) echo "Menu Inválido!" ;;
+        9)  ./Main.sh
+             ;;     
+        *)   ./Main.sh
+	     ;;
 
     esac
 }

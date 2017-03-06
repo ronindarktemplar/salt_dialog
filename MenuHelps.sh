@@ -226,7 +226,7 @@ function Menu()
 	3 "Modulo->Functions" \
 	4 "State Modules" \
 	5 "State Functions" \
-	9 "Sair" --stdout)
+	9 "Exit" --stdout)
 	
     	
 	case $menuopt in		
@@ -250,7 +250,7 @@ function Menu()
 			StateModuleToFunction
 			;;
 
-		9)      exit
+		9)      ./Main.sh
 			;;
 
 		*) echo "Menu Inválido!" ;;

@@ -329,10 +329,10 @@ function Menu()
 	clear
 
 	local menuBackup=$(dialog --menu "Modulo Backup" 20 35 15 \
-	1 "Backup Remoto " \
-	2 "Agendar Backup" \
-	3 "Ver Dir Modulo Backup" \
-	9 "Voltar        " --stdout)
+	1 "Remote   Backup" \
+	2 "Schedule Backup" \
+	3 "Dir Mod  Backup" \
+	9 "Exit        " --stdout)
 	
     	
 	case $menuBackup in		

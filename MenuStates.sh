@@ -244,7 +244,7 @@ function Menu()
 
 
 
-		9)      exit
+		9)      ./Main.sh
 			;;
 
 		*) echo "Menu Inválido!" ;;

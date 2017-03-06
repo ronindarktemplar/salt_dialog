@@ -168,11 +168,7 @@ function Menu()
 		5) 
 			KillJob
 			;;
-
-
-
-
-		9)      exit
+		9)      ./Main.sh
 			;;
 
 		*) echo "Menu Inválido!" ;;

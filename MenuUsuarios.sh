@@ -275,13 +275,13 @@ function Menu()
 {
     clear
 
-menuUsuario=$(dialog --menu "Menu/Usuarios" 20 35 15 \
-1 "Listar Usuarios" \
-2 "Criar Usuario" \
-3 "Excluir Usuario" \
-4 "Modificar Usuario" \
-5 "Procurar Usuario" \
-9 "Voltar" --stdout)
+menuUsuario=$(dialog --menu "Menu/Users" 20 35 15 \
+1 "List  Users" \
+2 "Add    User" \
+3 "Del    User" \
+4 "Modify User" \
+5 "Search User" \
+9 "Exit" --stdout)
 
 
 
