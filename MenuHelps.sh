@@ -54,7 +54,7 @@ function SelectFunc()
     
     local modules=$(cat $todialog )
 
-    myescolha=$(dialog --stdout --menu 'Escolha o interpretador de comandos:' 0 0 0 \
+    myescolha=$(dialog --stdout --menu 'Select :' 0 0 0 \
 	    `
             for x in $modules; do
 		    echo " "$x" Escolha-me ";
@@ -89,7 +89,7 @@ function SelectFunction()
 
     local modules=$(cat $todialog )
 
-    myescolha=$(dialog --stdout --menu 'Escolha o interpretador de comandos:' 0 0 0 \
+    myescolha=$(dialog --stdout --menu 'Select:' 0 0 0 \
 	    `
             for x in $modules; do
 		    echo " "$x" Escolha-me ";

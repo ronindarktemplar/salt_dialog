@@ -133,8 +133,10 @@ function ListarUsuarios()
 
     IPeUser mini
 
-    echo -e "$(sudo salt $mini cmd.run "cat /etc/passwd | cut -d ':' -f 1")" > $listusers
-    
+    echo -e "$(sudo salt $mini  user.list_users)" > $listusers
+
+    #cmd.run "cat /etc/passwd | cut -d ':' -f 1")" > $listusers
+  
     #dialog --title 'Listagem dos usuários' --textbox $listusers 0 0
     dialog --title 'Listagem dos usuários' --textbox /tmp/ListaUsers.txt 20 50
 
